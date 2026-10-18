@@ -6,7 +6,7 @@ cps = 800; ros = 840;           %beton komorkowy cp [J/kg K], ro [kg/m3]
 %----------- zapotrzebowanie i kociol --------------
 QkN = 15*1000;           %moc kotla. 15 kW
 Vk = 10/1000;         %pojemnosc kotla
-Cvk = cpw*row*Vk;    %pojemnosc cieplna kotla
+Cvk = cpw*row*Vk/skala;    %pojemnosc cieplna kotla
 %----- wymiary budynku --------------------------------
 VgN = IlePom * 50/1000;      %l -> m^3 (wszystkie grzejniki)
 VwN = 10 * 10 * 2.5;             %m3 (caly budynek)

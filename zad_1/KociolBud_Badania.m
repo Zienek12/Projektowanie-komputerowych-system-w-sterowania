@@ -138,7 +138,7 @@ legend(opisP, 'Location', 'best');
 % B. Wplyw opoznienia transportowego
 % ========================================================================
 tauMale = 0.1;                      % praktycznie brak opoznienia
-tauSpec = 240 / skala;              % opoznienie, dla ktorego widac reakcje
+tauSpec = 24000 / skala;              % opoznienie, dla ktorego widac reakcje
 tauBadanie = [tauMale, tauSpec];
 opisTau = {'male opoznienie', 'opoznienie specyficzne'};
 TwewTau = [];
