@@ -14,14 +14,18 @@ T = 1000; T0 = 100; k = 4 / (0.1*QkN);      %4 / 3000 = 0.0013
 %            BADANIA 
 %===========================================================
 %============= warunki poczatkowe nominalne  ===================
-Tzew0 = TzewN+1;                  
+Tzew0 = TzewN+1;  
 Qk0 = QkN*1;
 Fg0 = [1, 1, 1] .* FgN;
-Qd0 = [0, 0, 0];                                   %zawsze
+Qd0 = [0, 0, 0];   
 KociolBud_skryptP0;
+Sp = Twew0(1);
+
+%zawsze
 %=================== zaklocenie ======================
-dTzew = 1;
+dTzew = 0;
 dQk = 0*QkN;
+dSp = 1;
 dFg = [0, 0, 0] .* FgN;     %procent przeplywu nominalnego danego grzejnika
 dQd = [0, 0, 0] .* QgN;      %procent zapotrzebowania nominalnego danego pomieszczenia
 %-------------------------------------------------------
@@ -58,16 +62,29 @@ Ki_M2P_tune = C_M2P.Ki;
 Kp_vect = [Kp_MS, Kp_M2P, Kp_ms_tune, Kp_M2P_tune];
 Ti_Vect = [Ti_MS, Ti_M2P, Ki_ms_tune, Ki_M2P_tune];
 
+etykiety = {
+    'MS (reczne)';
+    'M2P (reczne)';
+    'MS (pidtune)';
+    'M2P (pidtune)'
+};
+
+%%
+figure(1);
 for i = 1:4
     Kp = Kp_vect(i);
     Ki = Ti_Vect(i);
-    [t] = sim(schemat, czas);                                     %[out] = sim(schemat, czas);
-    figure(1); hold on; grid on;
-    plot(t, aTwew_1, 'Color', kolor(i), 'LineStyle', linia(i, :));
+    [t] = sim(schemat, czas);
+  
+    subplot(2,1,1); hold on; grid on;
+    plot(t, aTwew_1, 'Color', kolor(i), 'LineStyle', linia{i}, 'DisplayName', etykiety{i});   
+    ylabel('Temperatura [C]');
+    title('Porownanie temperatury i syganlu sterujacego');
+    
+    subplot(2,1,2); hold on; grid on;
+    plot(t, aCV, 'Color', kolor(i), 'LineStyle', linia{i}, 'DisplayName', etykiety{i});
+    ylabel('Zawor [-]');
     xlabel('Czas [min]');
-    ylabel('Temperatura');
-    legend('Wynik symulacji', 'Location', 'best');
 end
-
-
-
+subplot(2,1,1); legend('Location', 'best');
+subplot(2,1,2); legend('Location', 'best');
