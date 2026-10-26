@@ -1,3 +1,4 @@
+%%
 clear all; close all;
 skala = 60;             %skala czasu (wszystkie czasy w minutach) 
 %gdy n=60, to Max step size daæ 0.1 
@@ -83,6 +84,28 @@ for i = 1:4
     
     subplot(2,1,2); hold on; grid on;
     plot(t, aCV, 'Color', kolor(i), 'LineStyle', linia{i}, 'DisplayName', etykiety{i});
+    ylabel('Zawor [-]');
+    xlabel('Czas [min]');
+end
+subplot(2,1,1); legend('Location', 'best');
+subplot(2,1,2); legend('Location', 'best');
+
+
+%%
+figure(2); hold on; grid on;
+
+for i = 2:4
+    Kp = Kp_vect(i);
+    Ki = Ti_Vect(i);
+    [t] = sim(schemat, czas);
+  
+    subplot(2,1,1); hold on; grid on;
+    plot(t, aTwewM, 'Color', kolor(i), 'LineStyle', linia{i}, 'DisplayName', etykiety{i});   
+    ylabel('Temperatura [C]');
+    title('Porownanie temperatury i syganlu sterujacego');
+    
+    subplot(2,1,2); hold on; grid on;
+    plot(t, aCVM, 'Color', kolor(i), 'LineStyle', linia{i}, 'DisplayName', etykiety{i});
     ylabel('Zawor [-]');
     xlabel('Czas [min]');
 end

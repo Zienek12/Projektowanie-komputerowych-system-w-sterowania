@@ -3430,7 +3430,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="ZOrder">23</P>
     <P Name="BlockRotation">270</P>
     <P Name="NameLocation">right</P>
-    <P Name="Value">Twew0</P>
+    <P Name="Value">Twew0(1)</P>
   </Block>
   <Block BlockType="Step" Name="Fg1" SID="106">
     <P Name="Position">[15, 160, 45, 190]</P>
@@ -3717,13 +3717,15 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <PortCounts in="1"/>
     <P Name="Position">[710, 374, 740, 406]</P>
     <P Name="ZOrder">30</P>
-    <P Name="GraphicalSettings">{&quot;GraphicalSettings&quot;:{&quot;LegacySettings&quot;:true,&quot;Style&quot;:{&quot;Style&quot;:{&quot;PlotType&quot;:&quot;Auto&quot;}}}}</P>
+    <P Name="GraphicalSettings">{&quot;Style&quot;:{&quot;BackgroundColor&quot;:[0.12941176470588237,0.12941176470588237,0.12941176470588237],&quot;AxesColor&quot;:[0.07058823529411765,0.07058823529411765,0.07058823529411765],&quot;LabelsColor&quot;:[0.8509803921568627,0.8509803921568627,0.8509803921568627],&quot;PreserveColors&quot;:false,&quot;Visible&quot;:[true],&quot;LineStyle&quot;:[&quot;-&quot;],&quot;LineWidth&quot;:[1.5],&quot;BarWidth&quot;:[0.9],&quot;LineColor&quot;:[&quot;auto&quot;],&quot;LineFaceAlpha&quot;:[1],&quot;LineEdgeAlpha&quot;:[1],&quot;Marker&quot;:[&quot;none&quot;],&quot;FontSize&quot;:8.5,&quot;LineTrueColor&quot;:[[1,0.9098039215686274,0.39215686274509803]],&quot;ChannelNames&quot;:&quot;&quot;,&quot;DefaultLegendLabel&quot;:[&quot;Sum1&quot;],&quot;PlotType&quot;:&quot;Auto&quot;,&quot;NumLinesForDisplays&quot;:[1],&quot;OffsetView&quot;:true,&quot;LineLabels&quot;:[&quot;Sum1&quot;],&quot;MinimizeControls&quot;:false,&quot;LineCache&quot;:null},&quot;MeasurementChannel&quot;:0,&quot;AxesScalingProperties&quot;:{&quot;AxesScaling&quot;:&quot;Manual&quot;,&quot;ExpandOnly&quot;:true,&quot;AxesScalingNumUpdates&quot;:10,&quot;ScaleAxesLimitsAtStop&quot;:true,&quot;YAxisDataRange&quot;:80,&quot;AlignYAxis&quot;:&quot;Center&quot;,&quot;AutoScaleXAxisLimits&quot;:false,&quot;XAxisDataRange&quot;:100,&quot;AlignXAxis&quot;:&quot;Center&quot;},&quot;DisplayProperties&quot;:{&quot;DisplayLayoutDimensions&quot;:[1,1],&quot;DisplayPropertyDefaults&quot;:{&quot;MaxYLimMag&quot;:1.1873255050149679e+37,&quot;MaxYLimReal&quot;:1.1873255050149679e+37,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-1.3192505611277418e+36,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},&quot;DisplayContentCache&quot;:{&quot;Title&quot;:&quot;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0},&quot;SerializedDisplays&quot;:[{&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;MaxYLimMag&quot;:1.1873255050149679e+37,&quot;MaxYLimReal&quot;:1.1873255050149679e+37,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-1.3192505611277418e+36,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;YLabel&quot;:&quot;&quot;,&quot;NumLines&quot;:1,&quot;ShowContent&quot;:1,&quot;Placement&quot;:0}],&quot;ColorOrder&quot;:[&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;]}}</P>
     <P Name="WindowPosition">[360.000000,150.000000,560.000000,420.000000,]</P>
-    <P Name="Visible">on</P>
     <P Name="ScopeFrameLocation">window</P>
     <P Name="WasSavedAsWebScope">on</P>
     <P Name="Floating">off</P>
+    <P Name="MultipleDisplayCache">[{&quot;MaxYLimMag&quot;:1,&quot;MaxYLimReal&quot;:1,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-1,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;}]</P>
     <P Name="NumInputPorts">1</P>
+    <P Name="ActiveDisplayYMinimum">-1</P>
+    <P Name="ActiveDisplayYMaximum">1</P>
     <P Name="DataLoggingVariableName">ScopeData1</P>
   </Block>
   <Block BlockType="Step" Name="Sp" SID="431">
@@ -3758,7 +3760,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <PortCounts in="2" out="1"/>
     <P Name="Position">[215, 430, 235, 450]</P>
     <P Name="ZOrder">24</P>
-    <P Name="Inputs">|++</P>
+    <P Name="Inputs">|+-</P>
   </Block>
   <Block BlockType="ToWorkspace" Name="To Workspace" SID="438">
     <PortCounts in="1"/>
@@ -3766,7 +3768,6 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="ZOrder">25</P>
     <P Name="VariableName">aTwewM</P>
     <P Name="MaxDataPoints">inf</P>
-    <P Name="SaveFormat">Timeseries</P>
     <P Name="FixptAsFi">on</P>
     <P Name="SampleTime">-1</P>
   </Block>
@@ -3828,13 +3829,13 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="Position">[485, 422, 545, 458]</P>
     <P Name="ZOrder">19</P>
     <P Name="Numerator">[0.002667]</P>
-    <P Name="Denominator">[570 1]</P>
+    <P Name="Denominator">[375 1]</P>
   </Block>
   <Block BlockType="TransportDelay" Name="Transport&#xA;Delay" SID="433">
     <PortCounts in="1" out="1"/>
     <P Name="Position">[570, 420, 610, 460]</P>
     <P Name="ZOrder">20</P>
-    <P Name="DelayTime">30</P>
+    <P Name="DelayTime">75</P>
   </Block>
   <Block BlockType="Step" Name="Tzew" SID="105">
     <P Name="Position">[20, 20, 50, 50]</P>
@@ -4117,8 +4118,8 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="LoadSaveID" Class="char">0</P>
           <P Name="Extents" Class="double">[1400.0, 366.0]</P>
           <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-85.652777777787207, 335.33333333333326]</P>
-          <P Name="SceneRectInView" Class="double">[-85.652777777787207, 335.33333333333326, 933.33333333333337, 244.0]</P>
+          <P Name="Offset" Class="double">[-9.6527777777870778, 346.13333333333333]</P>
+          <P Name="SceneRectInView" Class="double">[-9.6527777777870778, 346.13333333333333, 933.33333333333337, 244.0]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>
