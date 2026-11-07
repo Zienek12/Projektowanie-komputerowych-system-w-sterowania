@@ -94,7 +94,7 @@ subplot(2,1,2); legend('Location', 'best');
 %%
 figure(2); hold on; grid on;
 
-for i = 2:4
+for i = 1:4
     Kp = Kp_vect(i);
     Ki = Ti_Vect(i);
     [t] = sim(schemat, czas);

@@ -50,7 +50,7 @@ y_pp = y(idx_pp);                 % wartosc odpowiedzi w punkcie przegiecia
 
 % Pojedynczy wykres odpowiedzi z punktem przegiecia
 figure(1); hold on; grid on;
-plot(t, y, 'b-', 'LineWidth', 1.5);
+plot(t, y, 'b-', 'LineWidth', 0.5);
 %plot(t_pp, y_pp, 'ro', 'MarkerFaceColor', 'r', 'MarkerSize', 8);
 
 title('Odpowiedz skokowa obiektu');
