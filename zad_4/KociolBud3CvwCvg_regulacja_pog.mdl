@@ -43,8 +43,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2010-05-10T11:24:31Z</dcterms:created>
   <dc:creator>Mateusz</dc:creator>
   <cp:lastModifiedBy>andos</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-11-14T17:56:32Z</dcterms:modified>
-  <cp:revision>31.8</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-11-14T19:41:00Z</dcterms:modified>
+  <cp:revision>31.9</cp:revision>
   <cp:version>R2025b</cp:version>
 </cp:coreProperties>
 
@@ -115,7 +115,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:31.8&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:31.9&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -3327,7 +3327,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <P Name="Location">[-1, -8, 1921, 1041]</P>
   <P Name="Open">on</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">469</P>
+  <P Name="SIDHighWatermark">471</P>
   <Block BlockType="SubSystem" Name="Bud3Koc" SID="158">
     <PortCounts in="8" out="6"/>
     <P Name="Position">[445, 61, 520, 289]</P>
@@ -3388,23 +3388,23 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="GotoTag">Qd1</P>
   </Block>
   <Block BlockType="From" Name="From12" SID="428">
-    <P Name="Position">[70, -14, 110, 14]</P>
+    <P Name="Position">[290, -34, 330, -6]</P>
     <P Name="ZOrder">16</P>
-    <P Name="GotoTag">Tzew</P>
+    <P Name="GotoTag">Qk</P>
   </Block>
   <Block BlockType="From" Name="From13" SID="451">
-    <P Name="Position">[60, 406, 100, 434]</P>
+    <P Name="Position">[50, -64, 90, -36]</P>
     <P Name="ZOrder">19</P>
     <P Name="ShowName">off</P>
     <P Name="CloseFcn">tagdialog Close</P>
     <P Name="GotoTag">Tzew</P>
   </Block>
   <Block BlockType="From" Name="From14" SID="456">
-    <P Name="Position">[60, 366, 100, 394]</P>
+    <P Name="Position">[50, -104, 90, -76]</P>
     <P Name="ZOrder">24</P>
     <P Name="ShowName">off</P>
     <P Name="CloseFcn">tagdialog Close</P>
-    <P Name="GotoTag">Twew1</P>
+    <P Name="GotoTag">Sp</P>
   </Block>
   <Block BlockType="From" Name="From15" SID="227">
     <P Name="Position">[755, 251, 805, 279]</P>
@@ -3475,12 +3475,12 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="GotoTag">Qd3</P>
   </Block>
   <Block BlockType="Gain" Name="Gain" SID="454">
-    <P Name="Position">[135, 365, 165, 395]</P>
+    <P Name="Position">[125, -105, 155, -75]</P>
     <P Name="ZOrder">22</P>
     <P Name="Gain">Az</P>
   </Block>
   <Block BlockType="Gain" Name="Gain1" SID="455">
-    <P Name="Position">[135, 405, 165, 435]</P>
+    <P Name="Position">[125, -65, 155, -35]</P>
     <P Name="ZOrder">23</P>
     <P Name="Gain">Bz</P>
   </Block>
@@ -3574,11 +3574,6 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="ShowName">off</P>
     <P Name="GotoTag">Fg3</P>
   </Block>
-  <Block BlockType="ManualSwitch" Name="Manual Switch" SID="427">
-    <P Name="Position">[275, 52, 305, 88]</P>
-    <P Name="ZOrder">15</P>
-    <P Name="CurrentSetting">0</P>
-  </Block>
   <Block BlockType="ManualSwitch" Name="Manual Switch1" SID="468">
     <P Name="Position">[180, -8, 210, 28]</P>
     <P Name="ZOrder">65</P>
@@ -3623,6 +3618,11 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="After">Qk0+dQk</P>
     <P Name="SampleTime">0</P>
   </Block>
+  <Block BlockType="Constant" Name="Qk0_const" SID="471">
+    <P Name="Position">[215, 130, 245, 150]</P>
+    <P Name="ZOrder">67</P>
+    <P Name="Value">Qk0</P>
+  </Block>
   <Block BlockType="Scope" Name="Scope" SID="424">
     <PortCounts in="1"/>
     <P Name="Position">[555, 19, 585, 51]</P>
@@ -3662,7 +3662,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Block>
   <Block BlockType="Sum" Name="Subtract" SID="458">
     <PortCounts in="2" out="1"/>
-    <P Name="Position">[230, 387, 260, 418]</P>
+    <P Name="Position">[220, -83, 250, -52]</P>
     <P Name="ZOrder">26</P>
     <P Name="IconShape">rectangular</P>
     <P Name="Inputs">+-</P>
@@ -3672,6 +3672,13 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="Position">[140, 90, 160, 110]</P>
     <P Name="ZOrder">25</P>
     <P Name="Inputs">|+-</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum_Qk" SID="470">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[275, 52, 295, 88]</P>
+    <P Name="ZOrder">15</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">++-</P>
   </Block>
   <Block BlockType="ToWorkspace" Name="To Workspace1" SID="199">
     <PortCounts in="1"/>
@@ -3899,15 +3906,14 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Line>
   <Line>
     <P Name="ZOrder">78</P>
-    <P Name="Src">427#out:1</P>
+    <P Name="Src">470#out:1</P>
     <P Name="Points">[5, 0; 0, 20; 67, 0; 0, 10]</P>
     <P Name="Dst">158#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">79</P>
     <P Name="Src">420#out:1</P>
-    <P Name="Points">[5, 0]</P>
-    <P Name="Dst">427#in:2</P>
+    <P Name="Dst">470#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">106</P>
@@ -3939,8 +3945,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <Line>
     <P Name="ZOrder">143</P>
     <P Name="Src">458#out:1</P>
-    <P Name="Points">[19, 0; 0, -63; -166, 0; 0, -242]</P>
-    <P Name="Dst">457#in:1</P>
+    <P Name="Points">[20, 0; 0, 50; -112, 0; 0, 15]</P>
+    <P Name="Dst">468#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">144</P>
@@ -3950,7 +3956,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <Line>
     <P Name="ZOrder">145</P>
     <P Name="Src">428#out:1</P>
-    <P Name="Dst">468#in:1</P>
+    <P Name="Points">[19, 0; 0, 42; -94, 0]</P>
+    <P Name="Dst">470#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">146</P>
@@ -3961,8 +3968,12 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <Line>
     <P Name="ZOrder">147</P>
     <P Name="Src">468#out:1</P>
-    <P Name="Points">[28, 0; 0, 50]</P>
-    <P Name="Dst">427#in:1</P>
+    <P Name="Dst">457#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">148</P>
+    <P Name="Src">471#out:1</P>
+    <P Name="Dst">470#in:3</P>
   </Line>
 </System>
 
@@ -3990,10 +4001,10 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
-          <P Name="Extents" Class="double">[1420.0, 813.0]</P>
+          <P Name="Extents" Class="double">[1882.0, 813.0]</P>
           <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-217.74029644438832, -127.4199433200277]</P>
-          <P Name="SceneRectInView" Class="double">[-217.74029644438832, -127.4199433200277, 1420.0, 813.0]</P>
+          <P Name="Offset" Class="double">[-568.0, -144.70743905233513]</P>
+          <P Name="SceneRectInView" Class="double">[-568.0, -144.70743905233513, 1882.0, 813.0]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>
@@ -4026,20 +4037,8 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="SceneRectInView" Class="double">[-178.16666666666663, -85.999999999999972, 1067.3333333333333, 505.33333333333331]</P>
         </Object>
       </Array>
-      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*3">
+      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
         <Object ObjectID="9">
-          <P Name="Type" Class="char">LibraryBrowser2 LibraryBrowserStudioComponent</P>
-          <P Name="ID" Class="char">KociolBud3CvwCvg_regulacja_pog</P>
-          <P Name="Visible" Class="logical">1</P>
-          <P Name="CreateCallback" Class="char"/>
-          <P Name="UserData" Class="char"/>
-          <P Name="Floating" Class="logical">0</P>
-          <P Name="DockPosition" Class="char">Left</P>
-          <P Name="Width" Class="int32">454</P>
-          <P Name="Height" Class="int32">846</P>
-          <P Name="Minimized" Class="char">Unset</P>
-        </Object>
-        <Object ObjectID="10">
           <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
           <P Name="ID" Class="char">Property Inspector</P>
           <P Name="Visible" Class="logical">0</P>
@@ -4051,7 +4050,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
-        <Object ObjectID="11">
+        <Object ObjectID="10">
           <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
           <P Name="ID" Class="char">Referenced Files</P>
           <P Name="Visible" Class="logical">0</P>
@@ -4065,7 +4064,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAHKAAADavwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD8AAAAeQAAA2oAAADHAP////oAAAACAgAAAAP7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP////sAAACWAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8ASwBvAGMAaQBvAGwAQgB1AGQAMwBDAHYAdwBDAHYAZwBfAHIAZQBnAHUAbABhAGMAagBhAF8AbQBzAQAAAAD/////AAAAAAAAAAD7AAAAmABMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAMgAgAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgBTAHQAdQBkAGkAbwBDAG8AbQBwAG8AbgBlAG4AdAAvAEsAbwBjAGkAbwBsAEIAdQBkADMAQwB2AHcAQwB2AGcAXwByAGUAZwB1AGwAYQBjAGoAYQBfAHAAbwBnAQAAAAD/////AAAAxwD////7AAAAYABTAGkAbQB1AGwAaQBuAGsAOgBFAGQAaQB0AG8AcgA6AFIAZQBmAGUAcgBlAG4AYwBlAGQARgBpAGwAZQBzAC8AUgBlAGYAZQByAGUAbgBjAGUAZAAgAEYAaQBsAGUAcwAAAAAA/////wAAAIwA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAAFQARwBMAFUARQAyADoAUAByAG8AcABlAHIAdAB5AEkAbgBzAHAAZQBjAHQAbwByAC8AUAByAG8AcABlAHIAdAB5ACAASQBuAHMAcABlAGMAdABvAHIAAAAAAP////8AAAGsAP///wAAAAMAAAeAAAAA4vwBAAAAAfv/////AgAAAAAAAAMkAAAHgAAAANYAAAWyAAADagAAAAEAAAACAAAAAQAAAAL8AAAAAA==</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAHKAAADavwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD8AAAAeQAAA2oAAAAAAP////oAAAABAgAAAAP7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP////sAAACWAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8ASwBvAGMAaQBvAGwAQgB1AGQAMwBDAHYAdwBDAHYAZwBfAHIAZQBnAHUAbABhAGMAagBhAF8AbQBzAQAAAAD/////AAAAAAAAAAD7AAAAmABMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAMgAgAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgBTAHQAdQBkAGkAbwBDAG8AbQBwAG8AbgBlAG4AdAAvAEsAbwBjAGkAbwBsAEIAdQBkADMAQwB2AHcAQwB2AGcAXwByAGUAZwB1AGwAYQBjAGoAYQBfAHAAbwBnAQAAAAD/////AAAAAAAAAAD7AAAAYABTAGkAbQB1AGwAaQBuAGsAOgBFAGQAaQB0AG8AcgA6AFIAZQBmAGUAcgBlAG4AYwBlAGQARgBpAGwAZQBzAC8AUgBlAGYAZQByAGUAbgBjAGUAZAAgAEYAaQBsAGUAcwAAAAAA/////wAAAIwA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAAFQARwBMAFUARQAyADoAUAByAG8AcABlAHIAdAB5AEkAbgBzAHAAZQBjAHQAbwByAC8AUAByAG8AcABlAHIAdAB5ACAASQBuAHMAcABlAGMAdABvAHIAAAAAAP////8AAAGsAP///wAAAAMAAAeAAAAA4vwBAAAAAfv/////AAAAAAD/////AAACeQD///8AAAeAAAADagAAAAEAAAACAAAAAQAAAAL8AAAAAA==</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">63b36f4f-c355-4a68-8b69-0dc06ac65de3</P>
     </Object>
