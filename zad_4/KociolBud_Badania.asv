@@ -24,15 +24,24 @@ Sp = 0;
 dSp = 0;    %ZN     PIDTUNE
 Kp_vect = [189.5981, 132.1198];
 Ki_vect = [523.9755, 0.43713];
-dQk = 0.1*QkN;
+dQk = 0*QkN;
 dFg = [0, 0, 0] .* FgN;     %procent przeplywu nominalnego danego grzejnika
 dQd = [0, 0, 0] .* QgN;      %procent zapotrzebowania nominalnego danego pomieszczenia
 %-------------------------------------------------------
-%symulacja                                                     % wersja po 2019
-[t] = sim(schemat, czas);                                     %[out] = sim(schemat, czas);
-figure(1); hold on;grid on;
-plot(t, aTkz, strcat(kolor(1), linia(1,:)));     %plot(out,tout, out.aTwew_1, strcat(kolor(1), linia(1,:)));
+Kp = Kp_vect(1);
+Ki = Ki_vect(1);
 
 Az = (TgzN - TzewN) / (TwewN- TzewN);
 Bz = (TgzN - TwewN) / (TwewN - TzewN);
 
+[t] = sim(schemat, czas);                                     %[out] = sim(schemat, czas);
+
+for i = 1:2
+    Kp = kp_vect(i);
+    Ki = Ki_vect(i);
+    for j = 1:2
+
+        
+    end
+
+end

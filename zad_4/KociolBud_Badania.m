@@ -24,7 +24,7 @@ Sp = 0;
 dSp = 0;    %ZN     PIDTUNE
 Kp_vect = [189.5981, 132.1198];
 Ki_vect = [523.9755, 0.43713];
-dQk = 0.1*QkN;
+dQk = 0*QkN;
 dFg = [0, 0, 0] .* FgN;     %procent przeplywu nominalnego danego grzejnika
 dQd = [0, 0, 0] .* QgN;      %procent zapotrzebowania nominalnego danego pomieszczenia
 %-------------------------------------------------------
@@ -35,3 +35,19 @@ Az = (TgzN - TzewN) / (TwewN- TzewN);
 Bz = (TgzN - TwewN) / (TwewN - TzewN);
 
 [t] = sim(schemat, czas);                                     %[out] = sim(schemat, czas);
+
+for i = 1:2
+    Kp = Kp_vect(i);
+    Ki = Ki_vect(i);
+    for j = 0:1
+        set_param(gcb,'sw',j);
+        figure(); hold on; grid on;
+        subplot();
+        plot(t,aTwew_1);
+        subplot();
+        plot(t, aCV);
+        
+
+    end
+
+end
