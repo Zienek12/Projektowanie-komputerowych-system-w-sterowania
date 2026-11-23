@@ -29,8 +29,14 @@ dSp = 1;
 Kp = 3375;
 Ki = Kp/333;
 Ka = 0.3*Kp;
+
+max = 20;
+min = 0;
 %--------------------
 %symulacja                                                     
 [out] = sim(schemat, czas);
 
-
+figure(1);
+sublot(2,1,1);
+plot(t, aTwew1 );
+plot(t, aCv);
