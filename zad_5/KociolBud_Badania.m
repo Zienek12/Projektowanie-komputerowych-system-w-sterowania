@@ -13,31 +13,54 @@ T = 1000; T0 = 100; k = 4 / (0.1*QkN);      %4 / 3000 = 0.0013
 %            BADANIA 
 %===========================================================
 %============= warunki poczatkowe nominalne  ===================
-Tzew0 = TzewN+1;                  
+Tzew0 = TzewN+1;   
+
+Qk_max = 1.2*QkN;
 Qk0 = QkN*1;
 Fg0 = [1, 1, 1] .* FgN;
 Qd0 = [0, 0, 0];                                   %zawsze
 KociolBud_skryptP0;
+Twew_zad = TwewN;
+
 %=================== zaklocenie ======================
-dTzew = 1;
+dTzew = 0;
+dTwew = 1;
 dQk = 0*QkN;
 dFg = [0, 0, 0] .* FgN;     %procent przeplywu nominalnego danego grzejnika
 dQd = [0, 0, 0] .* QgN;      %procent zapotrzebowania nominalnego danego pomieszczenia
+%=============== dane pogodowe ===================
+Az = (TgzN - TzewN) / (TwewN - TzewN);
+Bz = (TgzN - TwewN) / (TwewN - TzewN);
+
+%===================== Histereza ====================
+h_rel = 14;
+
+
 %-------------------------------------------------------
 %symulacja                                                     % wersja po 2019
 [t] = sim(schemat, czas);                                     %[out] = sim(schemat, czas);
-figure(1); hold on;grid on;
-plot(t, aTwew_1, strcat(kolor(1), linia(1,:)));     %plot(out,tout, out.aTwew_1, strcat(kolor(1), linia(1,:)));
-plot(t, aTwew_2, strcat(kolor(2), linia(2,:)));  
-plot(t, aTwew_3, strcat(kolor(3), linia(3,:)));
-%plot(t,aPV,'k');
-title('T_w_e_w [^oC]'); xlabel('t[min]'); ylabel('Twew');
-legend('T_w_e_w_1', 'T_w_e_w_2', 'T_w_e_w_3');
 
-figure(2); hold on;grid on; 
-plot(t,aTkp,'b');
-%plot(t,aTkp,'b','LineWidth',2);
-title('T_k_p [^oC]'); xlabel('t[min]'); ylabel('Tkp');
+figure(1);
+hold on;
+grid on;
+subplot(3,1,1);
+plot(t, aTwew_1, 'LineWidth', 1.2);
+xlabel('Czas [min]');
+ylabel('Temperatura');
+legend('show', 'Location', 'best');
+title('Temperatura w pomieszczeniu');
 
+subplot(3,1,2);
+plot(t, aQk, 'LineWidth', 1.2);
+xlabel('Czas [min]');
+ylabel('KW');
+legend('show', 'Location', 'best');
+title('Wartosc sterujaca');
 
+subplot(3,1,3);
+plot(t, aTkz, 'LineWidth', 1.2);
+xlabel('Czas [min]');
+ylabel('Temperatura');
+legend('show', 'Location', 'best');
+title('TKZ');
 
